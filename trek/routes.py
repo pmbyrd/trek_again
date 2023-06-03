@@ -92,7 +92,7 @@ def register():
     
             db.session.add(newuser)
             db.session.commit()
-            flash(f"Account Succesfully created", "success")
+            flash(f"Account Successfully created", "success")
             return redirect(url_for("login"))
 
         except InvalidRequestError:
@@ -112,7 +112,7 @@ def register():
             flash(f"Error connecting to the database", "danger")
         except BuildError:
             db.session.rollback()
-            flash(f"An error occured !", "danger")
+            flash(f"An error occurred !", "danger")
     return render_template("auth.html",
         form=form,
         text="Create account",
