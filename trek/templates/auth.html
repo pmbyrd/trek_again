@@ -33,16 +33,16 @@
     {{ error }}
     {% endfor%}
         
-    {{ form.pwd(class_="form-control",placeholder="Password")}}
+    {{ form.password(class_="form-control",placeholder="Password")}}
     
-    {% for error in form.pwd.errors %}
+    {% for error in form.password.errors %}
     {{ error }}
     {% endfor%}
         
     {% if request.path == '/register/' %}
-    {{ form.cpwd(class_="form-control",placeholder="Confirm Password")}}
+    {{ form.copy_password(class_="form-control",placeholder="Confirm Password")}}
         
-    {% for error in form.cpwd.errors %}
+    {% for error in form.copy_password.errors %}
     {{ error }}
     {% endfor%}
         
